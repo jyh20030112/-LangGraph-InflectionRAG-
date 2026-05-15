@@ -232,7 +232,7 @@ class RAGTOOL:
         print(f"[RAG] 向量化与存储完成，{stored_total} 个向量已写入 Qdrant")
         return stored_total
 
-    def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+    def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         client = self._get_embedding_client()
         if client is None:
             print("[ERROR] Embedding 客户端不可用，无法检索")
